@@ -33,6 +33,9 @@ docker push $CONTAINER_REGISTRY/video-upload:1
 docker build -t $CONTAINER_REGISTRY/gateway:1 --file ../../gateway/Dockerfile-prod ../../gateway
 docker push $CONTAINER_REGISTRY/gateway:1
 
+docker build -t $CONTAINER_REGISTRY/advertise:1 --file ../../advertise/Dockerfile-prod ../../advertise
+docker push $CONTAINER_REGISTRY/advertise:1
+
 # 
 # Deploy containers to Kubernetes.
 #
