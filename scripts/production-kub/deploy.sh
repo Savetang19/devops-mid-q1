@@ -49,3 +49,4 @@ envsubst < mock-storage.yaml | kubectl apply -f -
 envsubst < video-streaming.yaml | kubectl apply -f -
 envsubst < video-upload.yaml | kubectl apply -f -
 envsubst < gateway.yaml | kubectl apply -f -
+envsubst < advertise.yaml | kubectl apply -f -
