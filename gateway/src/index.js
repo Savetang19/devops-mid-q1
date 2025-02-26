@@ -70,6 +70,18 @@ async function main() {
     });
 
     //
+    // web page to show ads list.
+    //
+    app.get("/advertise", async (req, res) => {
+        
+        // Retreives the data from the advertise microservice.
+        const adsResponse = await axios.get("http://advertise/advertise");
+
+        // Renders the ads for display in the browser.
+        res.render("advertise", { ads: adsResponse.data.ads });
+    });
+
+    //
     // HTTP GET route that streams video to the user's browser.
     //
     app.get("/api/video", async (req, res) => {
